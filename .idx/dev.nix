@@ -5,11 +5,15 @@
   channel = "stable-24.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    # pkgs.go
-    # pkgs.python311
-    # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
-    # pkgs.nodePackages.nodemon
+    pkgs.unzip
+    pkgs.openssh
+    pkgs.git
+    pkgs.qemu_kvm
+    pkgs.sudo
+    pkgs.cdrkit
+    pkgs.cloud-utils
+    pkgs.qemu
+    pkgs.wget
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -42,7 +46,7 @@
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
-        default.openFiles = [ ".idx/dev.nix" "README.md" ];
+        # default.openFiles = [ ".idx/dev.nix" "README.md" ];
       };
       # Runs when the workspace is (re)started
       onStart = {
