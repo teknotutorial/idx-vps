@@ -3,5 +3,4 @@ Baca tutorial lengkap Cara Mendapatkan VPS Gratis di Google IDX:
 https://www.teknotutorial.com/cara-mendapatkan-vps-gratis-di-google-idx/
 
 # How to Get a Free VPS on Google IDX
-Read the full tutorial here:
-https://www.teknotutorial.com/cara-mendapatkan-vps-gratis-di-google-idx/
+Read the full tutorial How to Get a Free VPS on Google IDX:
