@@ -1,4 +1,7 @@
-# Google IDX
-Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!
+# Cara Mendapatkan VPS Gratis di Google IDX
+Baca tutorial lengkap Cara Mendapatkan VPS Gratis di Google IDX:
+https://www.teknotutorial.com/cara-mendapatkan-vps-gratis-di-google-idx/
 
-Learn more at https://developers.google.com/idx/guides/customize-idx-env
+# How to Get a Free VPS on Google IDX
+Read the full tutorial here:
+https://www.teknotutorial.com/cara-mendapatkan-vps-gratis-di-google-idx/
