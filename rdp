@@ -1,0 +1,41 @@
+#!/bin/bash
+# RDP installation script - Auto Installer
+# Tested on Ubuntu/Debian
+
+set -e
+
+echo "=== Updating system ==="
+sudo apt update && sudo apt upgrade -y
+
+echo "=== Installing Desktop Environment (XFCE) and XRDP ==="
+sudo apt install xfce4 xfce4-goodies xrdp -y
+
+echo "=== Installing Browser ==="
+sudo apt install -y firefox-esr
+
+echo "=== Configuring XRDP session ==="
+echo "startxfce4" > ~/.xsession
+sudo chown $(whoami):$(whoami) ~/.xsession
+
+echo "=== Enabling XRDP service ==="
+sudo systemctl enable xrdp
+sudo systemctl restart xrdp
+
+echo "=== Adding Playit APT repository ==="
+curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
+
+echo "=== Updating package list ==="
+sudo apt update
+
+echo "=== Installing Playit ==="
+sudo apt install playit
+
+echo "=== Enabling Playit service ==="
+sudo systemctl enable --now playit
+
+echo "=== Running Playit setup ==="
+playit setup
+
+echo "✅ Playit installation complete!"
+echo "➡️ Run 'playit status' to check the tunnel status."
